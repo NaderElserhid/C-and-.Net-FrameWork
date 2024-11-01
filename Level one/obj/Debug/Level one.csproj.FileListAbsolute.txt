@@ -1,0 +1,7 @@
+C:\Users\nadir\OneDrive\Desktop\C#\.Net framword and C# implementtions\Level one\Level one\bin\Debug\Level one.exe.config
+C:\Users\nadir\OneDrive\Desktop\C#\.Net framword and C# implementtions\Level one\Level one\bin\Debug\Level one.exe
+C:\Users\nadir\OneDrive\Desktop\C#\.Net framword and C# implementtions\Level one\Level one\bin\Debug\Level one.pdb
+C:\Users\nadir\OneDrive\Desktop\C#\.Net framword and C# implementtions\Level one\Level one\obj\Debug\Level one.csproj.AssemblyReference.cache
+C:\Users\nadir\OneDrive\Desktop\C#\.Net framword and C# implementtions\Level one\Level one\obj\Debug\Level one.csproj.CoreCompileInputs.cache
+C:\Users\nadir\OneDrive\Desktop\C#\.Net framword and C# implementtions\Level one\Level one\obj\Debug\Level one.exe
+C:\Users\nadir\OneDrive\Desktop\C#\.Net framword and C# implementtions\Level one\Level one\obj\Debug\Level one.pdb
