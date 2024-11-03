@@ -1,5 +1,8 @@
 ﻿using System;
 
+// provides us various methods to use in an array
+using System.Linq;
+
 namespace Level_one
 {
     internal class Program
@@ -45,6 +48,19 @@ namespace Level_one
             BeautyCare = 11,
             Fashion = 15
         }
+        //methodes
+
+        static void PrintMyInfo(string Name, byte Age)
+        {
+            Console.WriteLine("Name= {0} , Age= {1}", Name, Age);
+        }
+
+        static void PrintMyInfo(string Name, byte Age, string Address = "No Address")
+        {
+            Console.WriteLine("Name= {0} , Age= {1}, Address= {2}", Name, Age, Address);
+        }
+
+
         static void Main(string[] args)
         {
             Console.WriteLine("hello world");
@@ -188,10 +204,107 @@ namespace Level_one
             mo >>= 2;
                 Console.WriteLine(mo);
             //****************************************************
+            //switch statement with grouped cases
+
+            char ch;
+            Console.WriteLine("Enter a letter");
+            ch = Convert.ToChar(Console.ReadLine());
+
+            switch (Char.ToLower(ch))
+            {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    Console.WriteLine("Vowel");
+                    break;
+                default:
+                    Console.WriteLine("Not a vowel");
+                    break;
+            }
             //****************************************************
+
+            //Simple Calculator
+
+            char op;
+            double first, second, result;
+
+            Console.Write("Enter first number: ");
+            first = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter second number: ");
+            second = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter operator (+, -, *, /): ");
+            op = (char)Console.Read();
+
+            switch (op)
+            {
+                case '+':
+                    result = first + second;
+                    Console.WriteLine("{0} + {1} = {2}", first, second, result);
+                    break;
+
+                case '-':
+                    result = first - second;
+                    Console.WriteLine("{0} - {1} = {2}", first, second, result);
+                    break;
+
+                case '*':
+                    result = first * second;
+                    Console.WriteLine("{0} * {1} = {2}", first, second, result);
+                    break;
+
+                case '/':
+                    result = first / second;
+                    Console.WriteLine("{0} / {1} = {2}", first, second, result);
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid Operator");
+                    break;
+
+            }
+
             //****************************************************
+            char[] gender = { 'm', 'f', 'm', 'm', 'm', 'f', 'f', 'm', 'm', 'f' };
+            int male = 0, female = 0;
+            foreach (char g in gender)
+            {
+                if (g == 'm')
+                    male++;
+                else if (g == 'f')
+                    female++;
+            }
+            Console.WriteLine("Number of male = {0}", male);
+            Console.WriteLine("Number of female = {0}", female);
             //****************************************************
+            PrintMyInfo("Mohammed-AbuHadhoud", 45);
+
+            //First we did not provide the address it's optional
+            PrintMyInfo("Mohammed-AbuHadhoud", 45);
+
+            //second we provided the address
+            PrintMyInfo("Mohammed-AbuHadhoud", 45, "Amman-Jordan");
             //****************************************************
+            try
+            {
+                int[] myNumbers = { 1, 2, 3 };
+                Console.WriteLine(myNumbers[10]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            //****************************************************
+            Random rnd = new Random();
+
+            for (int j = 0; j < 4; j++)
+            {
+                Console.WriteLine(rnd.Next(10, 20)); // returns random integers >= 10 and < 20
+            }
+
+            //****************************************************
+
 
             Console.ReadKey();
         }
