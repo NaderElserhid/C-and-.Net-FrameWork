@@ -26,6 +26,12 @@ namespace Level_one
             Fashion         // 9
         }
 
+        enum status
+        {
+           maryed,
+           unmaryed,
+        }
+
 
         //Enum can have any numarical data type byte, sbyte, short, ushort, int, uint, long, or ulong
         //but not string
@@ -127,6 +133,65 @@ namespace Level_one
 
             //****************************************************
 
+
+            string S1 = "Mohammed Abu-Hadhoud";
+
+            Console.WriteLine(S1.Length);
+
+            //this will take 5 characters staring position 2
+            Console.WriteLine(S1.Substring(2, 5));
+            Console.WriteLine(S1.ToLower());
+            Console.WriteLine(S1.ToUpper());
+            Console.WriteLine(S1[2]);
+            Console.WriteLine(S1.Insert(3, "KKKK"));
+            Console.WriteLine(S1.Replace("m", "*"));
+            Console.WriteLine(S1.IndexOf("m"));
+            Console.WriteLine(S1.Contains("m"));
+            Console.WriteLine(S1.Contains("x"));
+            Console.WriteLine(S1.LastIndexOf("m"));
+
+            string S2 = "Ali,Ahmed,Khalid";
+
+            string[] NamesList = S2.Split(',');
+
+            Console.WriteLine(NamesList[0]);
+            Console.WriteLine(NamesList[1]);
+            Console.WriteLine(NamesList[2]);
+
+            string S3 = "  Abu-Hadhoud  ";
+            Console.WriteLine(S3.Trim());
+            Console.WriteLine(S3.TrimStart());
+            Console.WriteLine(S3.TrimEnd());
+            //****************************************************
+
+            string firstName = "Mohammed";
+            string lastName = "Abu-Hadhoud";
+            string code = "107";
+
+            //You shold use $ to $ to identify an interpolated string 
+            string fullName = $"Mr. {firstName} {lastName}, Code: {code}";
+
+            Console.WriteLine(fullName);
+            Console.WriteLine(status.maryed);
+
+            //****************************************************
+            Console.WriteLine("Enter username?");
+
+            string userName = Console.ReadLine();
+            Console.WriteLine("Enter your age?");
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Username is: " + userName);
+            Console.WriteLine("Age is: " + age);
+
+            int mo = 10;
+            mo >>= 2;
+                Console.WriteLine(mo);
+            //****************************************************
+            //****************************************************
+            //****************************************************
+            //****************************************************
+            //****************************************************
 
             Console.ReadKey();
         }
